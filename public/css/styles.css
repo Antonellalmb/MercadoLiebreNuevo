@@ -112,13 +112,15 @@ main section h3 {
     color: rgb(111, 106, 106);
 }
 
-main section article h3 {
+main section article h4 {
     font-size: 16px;
-    opacity: 0.5;
+    transition: all 600ms;
+    
 }
 
 main section article {
     margin-bottom: 10px;
+    transition: all 600ms;
 }
 
 .infoArticulo {
@@ -129,9 +131,11 @@ main section article {
     position: relative;
     display: flex;
     width: 100%;
+    transition: all 600ms;
 }
 main section article img{
     width: 150px;
+    transition: all 600ms;
 }
 
 main section article div i{
@@ -146,6 +150,8 @@ main section article div i{
     position: absolute;
     right: 20px;
     top: -15px;
+    color:  #39b54a;
+    transition: all 600ms;
 }
 main section article .precio {
     width: 30%;
@@ -161,7 +167,7 @@ main section article .descuento {
     margin: 0;
     padding: 10px 0;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
     font-size: 16px;
     color: #39b54a;
     margin-top: 2px;
@@ -172,6 +178,7 @@ main section article div i {
     border: 1px solid #39b54a;
     border-radius: 100%;
     padding: 5px 18px 18px 5px;
+    transition: all 600ms;
 }
 
 .desc-producto {
@@ -230,22 +237,20 @@ main section article div div i {
     font-size: 16px;
 }*/
 
-#formulario-registro {
-    background-color: #ebebeb;
-}
-
-.formularios {
+.formulario-registro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
+    width: 80%;
+    background-color: #ebebeba6;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 7px 13px 20px 7px #666;
+    padding: 20px 30px;
+    color: grey;
+    max-width:650px;
 
-form div {
-    margin-bottom: 10px;
-    border-radius: 5%;
 }
-
 .text-field {
     padding: 5px;
 }
@@ -254,19 +259,80 @@ form div {
     display: flex;
     flex-direction: column;
 }
+.botonSubmit {
+    width: 80%;
+    height: 40px;
+    background: darkblue;
+    font-size: 16px ;
+    font-weight: bold;
+    color: whitesmoke ;
+    margin-bottom: 16px;
+    position: relative;
+}
+.botonReset {
+    width: 100%;
+    height: 40px;
+    background: darkblue;
+    font-size: 16px ;
+    font-weight: bold;
+    color: whitesmoke ;
+    margin-bottom: 16px;
+    position: relative;
+}
+.botones {
+    transition: all 500ms;
+}
 
-form .formulario-login{
-    background-color: #ebebeb;
+.botonSubmit:hover {
+    background-color: #1259c3;
+
+}
+.botonReset:hover {
+    background-color: red;
+}
+
+
+.formulario-login{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    width: 80%;
+    background-color: #ebebeba6;
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 7px 13px 20px 7px #666;
+    padding: 20px 30px;
+    color: grey;
+    max-width:550px;
 }
 
-input .log {
-    padding: 5px;
-}
+main form .log {
+    width: 80%;
+    border: 1px solid lightslategray;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: lightgray;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
 
+}
+.botonEnviar {
+    width: 80%;
+    height: 40px;
+    background: darkblue;
+    font-size: 16px ;
+    font-weight: bold;
+    color: whitesmoke ;
+    margin-bottom: 16px;
+    position: relative;
+}
+.boton {
+    transition: all 500ms;
+}
+.botonEnviar:hover {
+    background-color: #1259c3;
+
+}
 
 
 @media(min-width: 361px) {
@@ -282,7 +348,7 @@ input .log {
     }
 
     main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        
         width: 45%;
 
     }
@@ -308,6 +374,17 @@ input .log {
     .desc-producto {
         display: none;
     }
+    article:hover .desc-producto {
+        display: block;
+    }
+    article:hover {
+        box-shadow: 0px 0px 20px rgb(100, 100, 100);
+
+    }
+    article:hover i {
+        transform:rotate(-90deg);
+    }
+    
 
     
     
