@@ -21,7 +21,8 @@ header{
 }
 
 .logo{
-    width: 50%;
+    width: 30%;
+    height: 30%;
     padding: 10px;
 }
 
@@ -31,7 +32,7 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 header .buscador .lupa i {
@@ -50,7 +51,7 @@ header .buscador .input {
 header p{
     text-align: center;
     width: 100%;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 header nav {
@@ -71,7 +72,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     color: #000;
     font-weight: 600;
@@ -80,6 +81,7 @@ header nav ul li a {
 header nav .registrarse {
     margin-bottom: 0;
     padding-bottom: 10px;
+
 }
 
 header .burger-menu i {
@@ -191,7 +193,11 @@ main section article div i {
 }
 
 footer {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    
+    
+    
 }
 footer i {
     font-size: 2em;
@@ -199,14 +205,21 @@ footer i {
     color: #1259c3;
     text-align: center;
     margin-top: 10px;
+    transition: all 500ms;
+
 }
 footer article div i {
     font-size: 2em;
     color: #1259c3;
     margin-bottom: 10px;
+    transition: all 500ms;
+}
+footer i:hover {
+    color: lightblue;
+
 }
 footer article h4 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 1px;
     margin-top: 0px;
     color: #666;
@@ -217,10 +230,10 @@ footer article p {
     margin-top: 1px;
     color: #666;
 }
-
-footer p.copyright{
+ .copyright{
     font-size: 12px;
     text-align: left;
+    margin-top: 15px;
 }
 
 
@@ -253,14 +266,40 @@ main section article div div i {
 }
 .text-field {
     padding: 5px;
+    width: 100%;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #464b42;
+    font-size: 14px;
+    font-weight: lighter;
+    color: whitesmoke;
 }
 
 .selecciones {
     display: flex;
     flex-direction: column;
+    
 }
+
+.date {
+    padding: 5px;
+    width: 70%;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #42473d;
+    font-size: 12px;
+    font-weight: lighter;
+    color: whitesmoke;
+
+} 
+
+div .foto {
+}
+
 .botonSubmit {
-    width: 80%;
+    width: 100%;
     height: 40px;
     background: darkblue;
     font-size: 16px ;
