@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
     
 }
 
@@ -56,6 +57,8 @@ header p{
 
 header nav {
     display: none;
+    width: 100%;
+    
 }
 
 header nav ul {
@@ -65,6 +68,7 @@ header nav ul {
     justify-content: space-around;
     width: 42%;
     min-width: 370px;
+
 }
 
 header nav ul li {
@@ -77,10 +81,15 @@ header nav ul li a {
     color: #000;
     font-weight: 600;
 }
+header nav .web{
+    padding-left: 0;
+    padding-right: 40px;
 
-header nav .registrarse {
-    margin-bottom: 0;
-    padding-bottom: 10px;
+}
+
+.registrarse {
+    padding-left: 40px;
+    padding-right: 0;
 
 }
 
@@ -99,6 +108,7 @@ header .burger-menu {
 .banner {
     width: 100vw;
     margin-bottom: -4px;
+    
 }
 
 main {
@@ -191,7 +201,7 @@ main section article div i {
     color: #666;
    
 }
-
+/*
 footer {
     display: flex;
     flex-direction: row;
@@ -234,6 +244,68 @@ footer article p {
     font-size: 12px;
     text-align: left;
     margin-top: 15px;
+}*/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+footer div.detallesFooter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+} 
+
+footer section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer i {
+    font-size: 2em;
+    color: rgb(3, 3, 92);
+    margin-bottom: 10px;
+    transition: 500ms;
+}
+
+footer i:hover {
+    color: #0022AA;
+}
+
+footer h4 {
+    font-size:14px;
+    font-weight: 700;
+    color: #666;
+    margin: 0;
+}
+
+footer p {
+    font-size: 12px;
+    color: #666;
+    width: 75%;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.copy {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+footer .copyright {
+    width: 90%;
+    font-size: 10px;
+    text-align: left;
+    margin: 0 0 15px 0;
 }
 
 
@@ -249,15 +321,20 @@ main section article div div i {
     padding-right: 8px;
     font-size: 16px;
 }*/
+main.formu {
+    width: 100%;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
 
+}
 .formulario-registro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    background-color: #ebebeba6;
-    margin: auto;
-    margin-top: 25px;
+    width: 60%;
+    background-color: #becceeee;
+    margin-top: 15px;
     box-shadow: 7px 13px 20px 7px #666;
     padding: 20px 30px;
     color: grey;
@@ -265,48 +342,90 @@ main section article div div i {
 
 }
 .text-field {
-    padding: 5px;
     width: 100%;
-    border: 1px solid grey;
+    border: 1px solid lightslategray;
     margin-bottom: 15px;
-    padding: 11px 10px;
-    background: #464b42;
+    box-shadow: 0 0 2px 2px rgba(100, 100, 100, .5);
+    padding: 10px 10px;
+    background: lightgray;
     font-size: 14px;
-    font-weight: lighter;
-    color: whitesmoke;
+    font-weight: bold;
+    color: #666;
 }
 
 .selecciones {
     display: flex;
     flex-direction: column;
+    align-items: left;
     
 }
+.selecciones div {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
 
-.date {
-    padding: 5px;
+}
+
+.selecciones div input {
+    width: 20px;
+    text-align: left;
+
+    
+}
+.selecciones label {
+    text-align: left;
+}
+
+.intereses {
+
+}
+
+.perfil {
+
+}
+
+form div {
     width: 70%;
-    border: 1px solid grey;
+}
+.date {
+    width: 100%;
+    border: 1px solid lightslategray;
     margin-bottom: 15px;
+    background: lightgray;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.foto {
+    width: 80%;
+    margin-bottom: 0;
     padding: 11px 10px;
-    background: #42473d;
-    font-size: 12px;
-    font-weight: lighter;
-    color: whitesmoke;
-
-} 
-
-div .foto {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+div.botones {
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div.botones div {
+    width: 45%;
+    margin: 0;
+    padding: 0;
 }
 
 .botonSubmit {
     width: 100%;
-    height: 40px;
-    background: darkblue;
+    height: 40px;     
+    background: rgb(2, 2, 98);
     font-size: 16px ;
     font-weight: bold;
     color: whitesmoke ;
     margin-bottom: 16px;
-    position: relative;
 }
 .botonReset {
     width: 100%;
@@ -316,20 +435,18 @@ div .foto {
     font-weight: bold;
     color: whitesmoke ;
     margin-bottom: 16px;
-    position: relative;
 }
 .botones {
     transition: all 500ms;
 }
 
 .botonSubmit:hover {
-    background-color: #1259c3;
+    background-color: #0022AA;
 
 }
 .botonReset:hover {
-    background-color: red;
+    background-color: #0022AA;
 }
-
 
 .formulario-login{
     display: flex;
@@ -349,6 +466,7 @@ main form .log {
     border: 1px solid lightslategray;
     margin-bottom: 15px;
     padding: 11px 10px;
+    box-shadow: 0 0 2px 2px rgba(100, 100, 100, .5);
     background: lightgray;
     font-size: 14px;
     font-weight: bold;
@@ -358,7 +476,7 @@ main form .log {
 .botonEnviar {
     width: 80%;
     height: 40px;
-    background: darkblue;
+    background: rgb(2, 2, 98);
     font-size: 16px ;
     font-weight: bold;
     color: whitesmoke ;
@@ -369,8 +487,12 @@ main form .log {
     transition: all 500ms;
 }
 .botonEnviar:hover {
-    background-color: #1259c3;
+    background-color: #0022AA;
 
+}
+
+header nav {
+    display: none;
 }
 
 
@@ -385,6 +507,11 @@ main form .log {
     .desc-producto {
         display: block;
     }
+    header nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    } 
 
     main section article {
         
@@ -392,11 +519,6 @@ main form .log {
 
     }
 
-    header nav {
-        display: flex; 
-        justify-content: space-between; 
-     
-    }
 
     header div.burger-menu {
         display: none;
@@ -422,6 +544,19 @@ main form .log {
     }
     article:hover i {
         transform:rotate(-90deg);
+    }
+
+    footer div.detallesFooter {
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+
+    footer div.detallesFooter section {
+        width: 30%;
+    }
+
+    footer div.detallesFooter section p {
+        width: 90%;
     }
     
 
