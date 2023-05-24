@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #ebebeb;
+    
     
 }
 
@@ -29,24 +29,43 @@ header{
 
 .buscador{
     width:50%;
-    padding: 5px;
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
-header .buscador .lupa i {
+header .buscador div .lupa i {
     background-color: #fff;
     border: 1px solid #000;
     color: #666;
+    border: none;
 }
-
-header .buscador .input {
-    background-color: #fff;
-    border: 1px solid #000;
-    color: #666;
+.buscador div {
+    
     width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    
+}
+.buscador div .lupa{
+    display: inline-block;
+    right: 13%;
+    width: 4px;
+    bottom: 0;
+    position: absolute;
+    
+
+}
+
+header .buscador div .input {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #666;
+    width: 100%;
+    height: 25px;
+    font-size: 10px;
+    justify-self: flex-end;
 }
 
 header p{
@@ -153,9 +172,8 @@ main section article img{
 main section article div i{
     display: block;
     font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
+    width: 30px 20px ;
+    height: 30px 20px ;
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
@@ -165,6 +183,13 @@ main section article div i{
     color:  #39b54a;
     transition: all 600ms;
 }
+
+main section article div i {    
+    border-radius: 100%;
+    padding: 7px 5px 7px 5px;
+    transition: all 600ms;
+}
+
 main section article .precio {
     width: 30%;
     margin: 0;
@@ -185,14 +210,6 @@ main section article .descuento {
     margin-top: 2px;
 }
 
-main section article div i {
-    
-    border: 1px solid #39b54a;
-    border-radius: 100%;
-    padding: 5px 18px 18px 5px;
-    transition: all 600ms;
-}
-
 .desc-producto {
     display: none;
     margin: 0;
@@ -205,9 +222,6 @@ main section article div i {
 footer {
     display: flex;
     flex-direction: row;
-    
-    
-    
 }
 footer i {
     font-size: 2em;
@@ -216,7 +230,6 @@ footer i {
     text-align: center;
     margin-top: 10px;
     transition: all 500ms;
-
 }
 footer article div i {
     font-size: 2em;
@@ -234,7 +247,6 @@ footer article h4 {
     margin-top: 0px;
     color: #666;
 }
-
 footer article p {
     font-size: 12px;
     margin-top: 1px;
@@ -248,7 +260,7 @@ footer article p {
 footer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 50px 20px ;
 }
 
 footer div.detallesFooter {
@@ -272,7 +284,7 @@ footer i {
     font-size: 2em;
     color: rgb(3, 3, 92);
     margin-bottom: 10px;
-    transition: 500ms;
+    transition: all 500ms;
 }
 
 footer i:hover {
@@ -307,8 +319,6 @@ footer .copyright {
     text-align: left;
     margin: 0 0 15px 0;
 }
-
-
 /*
 main section article div div i {
     width: 40px;
@@ -325,7 +335,10 @@ main.formu {
     width: 100%;
     background-color: #ebebeb;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-right: 0;
 
 }
 .formulario-registro {
@@ -333,10 +346,10 @@ main.formu {
     flex-direction: column;
     align-items: center;
     width: 60%;
-    background-color: #becceeee;
+    background-color: #ebebeb;
     margin-top: 15px;
-    box-shadow: 7px 13px 20px 7px #666;
-    padding: 20px 30px;
+    box-shadow: 7px 13px 20px 7px #616795;
+    padding: 20px 30px 20px ;
     color: grey;
     max-width:650px;
 
@@ -369,19 +382,23 @@ main.formu {
 .selecciones div input {
     width: 20px;
     text-align: left;
-
-    
+        
 }
 .selecciones label {
     text-align: left;
+    font-size: 12px;
 }
 
-.intereses {
-
+form h3.intereses  {
+    font-size: 14px;
+    font-style: italic;
+    text-align: left;
 }
 
-.perfil {
-
+h3.perfil  {
+    text-align: left;
+    font-size: 14px;
+    font-style: italic;
 }
 
 form div {
@@ -392,6 +409,7 @@ form div {
     border: 1px solid lightslategray;
     margin-bottom: 15px;
     background: lightgray;
+    box-shadow: 0 0 2px 2px rgba(100, 100, 100, .5);
     padding: 10px 0;
     font-size: 14px;
     font-weight: bold;
@@ -400,17 +418,24 @@ form div {
 
 .foto {
     width: 80%;
-    margin-bottom: 0;
+    margin-bottom: 10;
     padding: 11px 10px;
     font-size: 14px;
     font-weight: bold;
     color: #666;
 }
+div label.foto input {
+    margin-bottom: 10px;
+}
+
 div.botones {
+    display: flex;
     width: 70%;
     flex-direction: row;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
 }
 div.botones div {
     width: 45%;
@@ -425,16 +450,16 @@ div.botones div {
     font-size: 16px ;
     font-weight: bold;
     color: whitesmoke ;
-    margin-bottom: 16px;
+    margin-bottom: 0
 }
 .botonReset {
     width: 100%;
     height: 40px;
-    background: darkblue;
+    background: rgb(2, 2, 98);
     font-size: 16px ;
     font-weight: bold;
     color: whitesmoke ;
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 .botones {
     transition: all 500ms;
@@ -445,20 +470,21 @@ div.botones div {
 
 }
 .botonReset:hover {
-    background-color: #0022AA;
+    background-color: rgba(230, 13, 13, 0.915);
 }
 
 .formulario-login{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    background-color: #ebebeba6;
-    margin: auto;
-    margin-top: 25px;
-    box-shadow: 7px 13px 20px 7px #666;
-    padding: 20px 30px;
+    align-items: center;
+    width: 60%;
+    background-color: #ebebeb;
+    margin-top: 15px;
+    box-shadow: 7px 13px 20px 7px #616795;
+    padding-top: 15px;
     color: grey;
-    max-width:550px;
+    max-width:650px;
+
 }
 
 main form .log {
@@ -507,22 +533,18 @@ header nav {
     .desc-producto {
         display: block;
     }
-    header nav{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     } 
 
     main section article {
-        
         width: 45%;
-
     }
-
 
     header div.burger-menu {
         display: none;
-
     }
     
 }
@@ -535,13 +557,15 @@ header nav {
     .desc-producto {
         display: none;
     }
+
     article:hover .desc-producto {
         display: block;
     }
+
     article:hover {
         box-shadow: 0px 0px 20px rgb(100, 100, 100);
-
     }
+
     article:hover i {
         transform:rotate(-90deg);
     }
